@@ -1,56 +1,23 @@
-# 네일뭐 해?
+# 💅🏻 네일 뭐 해?
 
-# React + TypeScript + Vite
+앱센터 16.5기 겨울 프로젝트 **네일 뭐 해?** 웹 저장소입니다 💡
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🙋🏻‍♀️ 팀원
 
-Currently, two official plugins are available:
+ <a href="https://github.com/hyelenaa">
+      <img src="https://avatars.githubusercontent.com/u/147942060?v=4" width="100">
+    </a>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ <a href="https://github.com/hani0903">
+      <img src="https://avatars.githubusercontent.com/u/147942060?v=4" width="100">
+    </a>
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 📝 규칙
+    
+- `branch 규칙`
+  - 각자의 영어 이름을 딴 branch 명을 사용한다.
+  - 예시:
+  ```
+  git checkout -b <브랜치명>
+  git checkout -b mingyu
+  ```
