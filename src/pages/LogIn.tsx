@@ -1,7 +1,7 @@
-import React from 'react';
-import logoImg from './../assets/logo.png';
 import CloseIcon from './../assets/icon_x.svg';
 import { Link } from 'react-router-dom';
+import Input from '../components/Input';
+import Logo from '../components/Logo';
 
 export default function LogIn() {
     return (
@@ -9,10 +9,7 @@ export default function LogIn() {
             <div className="password-recovery-section flex flex-row my-0 mx-auto justify-between w-[1300px] h-[407px] items-center">
                 <section className="h-[290px] flex flex-col justify-between items-center">
                     <div className="flex flex-col justify-between w-[500px] h-[198px] items-center">
-                        <header className="section-header flex justify-center items-center ">
-                            <img src={logoImg} alt="로고 이미지" className="w-[116px] h-[116px]" />
-                            <span className="ml-2 text-[87.84px] brand-name align-middle">네일뭐해?</span>
-                        </header>
+                        <Logo />
                         <p className="inline-block w-full text-xl text-[#5C5C5C]">
                             서비스 소개글입니다.서비스 소개글입니다.서비스 소개글입니다.서비스 소개글입니다. 서비스
                             소개글입니다.
@@ -29,23 +26,13 @@ export default function LogIn() {
                             <img src={CloseIcon} alt="닫기" className="w-3 h-3 " />
                         </button>
                     </div>
-                    <div>
-                        <p className="flex flex-col mb-10">
-                            <label>이메일</label>
-                            <input
-                                type="password"
-                                placeholder="example@gmail.com"
-                                className="bg-[#FBFBFB] w-full h-[57px] px-3 mt-2"
-                            ></input>
-                        </p>
-                        <p className="flex flex-col">
-                            <label>비밀번호</label>
-                            <input
-                                type="password"
-                                placeholder="8자 이상, 대문자와 특수문자를 포함하세요"
-                                className="bg-[#FBFBFB] w-full h-[57px] px-3 mt-2"
-                            ></input>
-                        </p>
+                    <div className="flex flex-col justify-between h-[218px]">
+                        <Input label="이메일" type="email" placeholder="example@gmail.com" />
+                        <Input
+                            label="비밀번호"
+                            type="password"
+                            placeholder="8자 이상, 대문자와 특수문자를 포함하세요"
+                        />
                     </div>
                     <button className="w-full h-[57px] bg-[#FB6091] text-xl text-white rounded-[6px] cursor-pointer">
                         로그인
