@@ -5,13 +5,14 @@ import houseSvg from './../assets/house.svg';
 import Logo from '../components/Logo';
 import { Link } from 'react-router-dom';
 
+
 const KAKAO_URI = `http://kakao.com`;
 const NAVER_URI = `http://naver.com`;
 const GOOGLE_URI = `http://google.com`;
 
 export default function Home() {
     return (
-        <main className="flex h-screen items-center">
+            <main className="flex h-screen items-center">
             <div className="flex flex-col items-center h-[561px] justify-between my-0 mx-auto">
                 <div className="flex flex-col justify-between w-[500px] h-[198px]">
                     <Logo />
@@ -27,7 +28,7 @@ export default function Home() {
                         </span>
                         <div className="btn-group flex justify-evenly">
                             <Link className=" rounded-xl" to={KAKAO_URI}>
-                                <img className="w-[50px] h-[50px]" src={kakaoLogo} alt="카카오 로그인"></img>
+                                <img className="w-[50px] h-[50px]np" src={kakaoLogo} alt="카카오 로그인"></img>
                             </Link>
                             <Link to={NAVER_URI}>
                                 <img className="w-[50px] h-[50px]" src={naverLogo} alt="네이버 로그인"></img>
