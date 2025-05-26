@@ -1,83 +1,37 @@
-import Logo from './../components/Logo'
-import { Link } from "react-router-dom";
+import Logo from './../components/Logo';
+import { Link } from 'react-router-dom';
+import NavButton from './NavButton';
 
-const LoginIcon = '/images/로그인.svg'
-const ScheduleIcon = '/images/일정관리.svg'
-const ReservationIcon = '/images/예약관리.svg'
-const ChatIcon = '/images/채팅.svg'
-const ManuIcon = '/images/메뉴관리.svg'
-const CustomerIcon = '/images/고객관리.svg'
-
+import ScheduleIcon from '../assets/icons/calendar.svg?react';
+import ChatIcon from '../assets/icons/chat.svg?react';
+import ReservationIcon from '../assets/icons/reservation.svg?react';
+import MenuIcon from '../assets/icons/menu.svg?react';
+import CustomerIcon from '../assets/icons/customer.svg?react';
 
 const SideNav = () => {
     return (
-        <nav className="fixed w-[250px] h-full shadow-[0px_0px_15px_rgba(170,170,170,0.25)]"> 
-            <ul className="flex flex-col w-full items-center mt-8">
-             {/* 로고 */}   
-             <Logo fontSize={26}/>
-                {/* 로그인 */}
-                <li className="flex flex-1">
-                    <Link to="/login" className="flex w-full justify-center mt-7 mb-12">
-                        <img
-                            src={LoginIcon}
-                            width= "80%"
-                            height="5%"
-                        />
-                    </Link>              
-                </li>
+        <nav className="fixed w-[250px] h-full z-50 p-9 shadow-[0px_0px_15px_rgba(170,170,170,0.25)] ">
+            {/* 로고 */}
+            <Logo fontSize={26} />
+
+            <ul className="flex flex-col w-full items-center mt-8  gap-y-6">
                 {/* 일정관리 */}
-                <li className="flex flex-1">
-                    <Link to="/login" className="flex w-full justify-center mb-8">
-                        <img
-                            src={ScheduleIcon}
-                            width= "80%"
-                            height="5%"
-                        />
-                    </Link>              
-                </li>
+                <NavButton to="/schedule" icon={ScheduleIcon} text="일정관리" />
+
                 {/* 예약관리 */}
-                 <li className="flex flex-1">
-                    <Link to="/login" className="flex w-full justify-center mb-8">
-                        <img
-                            src={ReservationIcon}
-                            width= "80%"
-                            height="5%"
-                        />
-                    </Link>              
-                </li>
+                <NavButton to="/reservation" icon={ReservationIcon} text="예약관리" />
+
                 {/* 채팅 */}
-                <li className="flex flex-1">
-                    <Link to="/login" className="flex w-full justify-center mb-8">
-                        <img
-                            src={ChatIcon}
-                            width= "80%"
-                            height="5%"
-                        />
-                    </Link>              
-                </li>
-                 {/* 메뉴관리 */}
-                 <li className="flex flex-1">
-                    <Link to="/login" className="flex w-full justify-center mb-8">
-                        <img
-                            src={ManuIcon}
-                            width= "80%"
-                            height="5%"
-                        />
-                    </Link>              
-                </li>
+                <NavButton to="/chat" icon={ChatIcon} text="채팅" />
+
+                {/* 메뉴관리 */}
+                <NavButton to="/menu" icon={MenuIcon} text="메뉴관리" />
+
                 {/* 고객관리 */}
-                <li className="flex flex-1">
-                    <Link to="/login" className="flex w-full justify-center">
-                        <img
-                            src={CustomerIcon}
-                            width= "80%"
-                            height="5%"
-                        />
-                    </Link>              
-                </li>
+                <NavButton to="/customer" icon={CustomerIcon} text="고객관리" />
             </ul>
         </nav>
-    )
-  };
-  
-  export default SideNav;
+    );
+};
+
+export default SideNav;
